@@ -1,0 +1,251 @@
+:root {
+    --theme-color: #4E7AB5;
+    --bg-dark: #131314;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FBFBFB;
+    color: var(--theme-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+a {
+    color: var(--theme-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    padding: 40px 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-dark);
+}
+
+
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li {
+    margin: 0 40px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--theme-color);
+    font-size: 20px;
+    text-transform: lowercase;
+    transition: all ease .2s;
+}
+
+header nav ul li a:hover {
+    opacity: 0.8;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo .icon {
+    width: 51px;
+    height: 55px;
+    background-image: url('../img/logo-icon.svg');
+}
+
+header .logo .name {
+    margin-left: 10px;
+}
+
+.intro {
+    font-size: 24px;
+    line-height: 28px;
+    height: 100vh;
+    margin-top: 240px;
+}
+
+.intro .intro--highlight {
+    font-size: 72px;
+    text-transform: uppercase;
+}
+
+.social a {
+    margin: 0 10px;
+    transition: all ease .2s;
+    text-decoration: none;
+}
+
+.social a:hover {
+    opacity: 0.8;
+}
+
+
+
+section .title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid var(--theme-color);
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.portfolio--items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    text-align: justify;
+}
+
+.portfolio--item--screenshots {
+    display: flex;
+}
+
+.portfolio--item--desktop.group {
+    margin-left: -100px;
+    z-index: -1;
+}
+
+.portfolio--item--title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.portfolio--item--mobile.alone {
+    width: 100%;
+    margin-bottom: 176px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio--item--mobile img {
+    width: 200px;
+}
+
+.portfolio--item--desktop img {
+    width: 600px;
+}
+
+
+footer {
+    background-color: var(--bg-dark);
+    color: #FBFBFB;
+    padding: 40px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+footer .author {
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+.mobileMenu {
+    display: none;
+    width: 80px;
+    height: 80px;
+    background-image: url('../img/burger-menu.svg');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+}
+
+@media (max-width: 770px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        height: 100%;
+        margin: 0;
+    }
+
+    header nav ul li a {
+        padding: 40px;
+    }
+
+    header nav ul li a {
+        display: block;
+        height: 100%;
+    }
+
+    .intro {
+        line-height: 64px;
+        padding: 20px;
+    }
+
+    .intro .intro--highlight { 
+        font-size: 54px;
+    }
+
+    .portfolio--items {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio--item {
+        padding: 20px;
+    }
+
+    .portfolio .title {
+        text-align: center;
+    }
+
+    .portfolio--item--mobile img {
+        width: 100px;
+    }
+
+    .portfolio--item--desktop img {
+        width: 300px;
+    }
+
+    
+    .mobileMenu {
+        display: block;
+    }
+    
+}
