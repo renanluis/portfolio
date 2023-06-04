@@ -86,9 +86,12 @@ header .logo .name {
     margin-left: 10px;
 }
 
+section {
+    padding: 20px;
+}
+
 .intro {
     font-size: 24px;
-    line-height: 28px;
     height: 100vh;
     margin-top: 240px;
 }
@@ -132,7 +135,7 @@ section .title {
 }
 
 .portfolio--item--desktop.group {
-    margin-left: -100px;
+    margin-left: -60px;
     z-index: -1;
 }
 
@@ -141,19 +144,13 @@ section .title {
     font-weight: bold;
 }
 
-.portfolio--item--mobile.alone {
-    width: 100%;
-    margin-bottom: 176px;
-    display: flex;
-    justify-content: center;
-}
 
 .portfolio--item--mobile img {
     width: 200px;
 }
 
 .portfolio--item--desktop img {
-    width: 600px;
+    width: 320px;
 }
 
 
@@ -192,6 +189,11 @@ footer .author {
         flex-direction: column;
     }
 
+    header .logo {
+        justify-content: flex-start;
+        margin-left: 40px
+    }
+
     header nav ul {
         display: none;
     }
@@ -214,13 +216,13 @@ footer .author {
         height: 100%;
     }
 
-    .intro {
-        line-height: 64px;
-        padding: 20px;
+    section {
+        margin-bottom: 40px;
     }
 
+
     .intro .intro--highlight { 
-        font-size: 54px;
+        font-size: 48px;
     }
 
     .portfolio--items {
@@ -229,10 +231,13 @@ footer .author {
 
     .portfolio--item {
         padding: 20px;
+        font-size: 14px;
+        word-wrap: break-word;
     }
 
-    .portfolio .title {
+    section .title {
         text-align: center;
+        font-size: 24px;
     }
 
     .portfolio--item--mobile img {
@@ -240,7 +245,7 @@ footer .author {
     }
 
     .portfolio--item--desktop img {
-        width: 300px;
+        width: 220px;
     }
 
     
